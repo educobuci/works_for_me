@@ -1,14 +1,64 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>WorksForMe</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>WORKS FOR ME</title>
+      <%= stylesheet_link_tag 'master' %>
+      <%= javascript_include_tag :defaults %>
+      <%= csrf_meta_tag %>
+    </head>
+  </head>
+  <body>
+    <div id="structure">
+      <div id="container">
+        <div id="header">
+          <a href="#" class="logo"><img src="/images/logo.png" alt="WORKS FOR ME" /></a>
+          <h1><a href="#">Works for me!</a></h1>
+          <span>// Na minha máquina funciona!</span>
+        </div>
+        <div id="menu">
+          <ul>
+            <li>&nbsp;</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Arquivo</a></li>
+            <li><a href="#">Equipe</a></li>
+          </ul>
+        </div>
+        <div id="main_area">
 
-<%= yield %>
+          <%= yield %>
 
-</body>
+          <div id="search">
+            <form>
+              <input class="text" name="q" value="Buscar" />
+              <input class="button" type="submit" value="buscar" />
+            </form>
+          </div>
+          <div id="lastest_posts">
+            <h4>Últimos Posts</h4>
+            <ul>
+              <li><a href="#">Orientação à Objetos em JavaScript</a></li>
+              <li><a href="#">BDD na prática</a></li>
+              <li><a href="#">HTML e JavaScript</a></li>
+            </ul>
+            <span class="view_all"><a href="#">ver todos&raquo;</a></span>
+          </div>
+          <div id="archive_list">
+            <h4>Arquivo</h4>
+            <ul>
+              <li><a href="#">Maio 2010</a></li>
+              <li><a href="#">Abril 2010</a></li>
+              <li><a href="#">Março 2010</a></li>
+            </ul>
+          </div>
+        </div>
+        <div id="externals">
+          <a href="#" class="twitter">Signa-nos no Twitter</a>
+          <a href="#" class="rss">RSS</a>
+        </div>
+        <div id="footer">
+          <p>2010 - worksforme.com.br</p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
