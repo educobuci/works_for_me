@@ -1,0 +1,7 @@
+- mostrar a categoria dos posts
+- página do post e comentarios
+- página com todos os posts
+- página de categorias
+- arquivo por ano
+- suporte a páginas personalizadas
+- busca e resultado

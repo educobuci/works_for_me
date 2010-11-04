@@ -15,14 +15,9 @@
           <h1><a href="#">Works for me!</a></h1>
           <span>// Na minha máquina funciona!</span>
         </div>
-        <div id="menu">
-          <ul>
-            <li>&nbsp;</li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Arquivo</a></li>
-            <li><a href="#">Equipe</a></li>
-          </ul>
-        </div>
+        
+        <%= render :partial => 'home/main_menu' %>
+        
         <div id="main_area">
 
           <%= yield %>
@@ -33,23 +28,13 @@
               <input class="button" type="submit" value="buscar" />
             </form>
           </div>
-          <div id="lastest_posts">
-            <h4>Últimos Posts</h4>
-            <ul>
-              <li><a href="#">Orientação à Objetos em JavaScript</a></li>
-              <li><a href="#">BDD na prática</a></li>
-              <li><a href="#">HTML e JavaScript</a></li>
-            </ul>
-            <span class="view_all"><a href="#">ver todos&raquo;</a></span>
-          </div>
-          <div id="archive_list">
-            <h4>Arquivo</h4>
-            <ul>
-              <li><a href="#">Maio 2010</a></li>
-              <li><a href="#">Abril 2010</a></li>
-              <li><a href="#">Março 2010</a></li>
-            </ul>
-          </div>
+          
+          <%= render :partial => 'latest_posts' %>
+          
+          <%= render :partial => 'categories' %>
+          
+          <%= render :partial => 'archives' %>
+          
         </div>
         <div id="externals">
           <a href="#" class="twitter">Signa-nos no Twitter</a>

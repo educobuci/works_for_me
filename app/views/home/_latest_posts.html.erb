@@ -1,0 +1,9 @@
+<div id="lastest_posts" class="side_menu">
+  <h4>Últimos Posts</h4>
+  <ul>
+    <% @posts.each do |post| %>
+    <li><%= link_to post.title, post %></li>
+    <% end %>
+  </ul>
+  <span class="view_all"><a href="#">ver todos &raquo;</a></span>
+</div>

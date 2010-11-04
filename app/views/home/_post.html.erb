@@ -4,14 +4,14 @@ if post.content.index('[!--more--]')
 end
 %>
   <div id="post-1" class="post">
-    <h2 class="home"><a href="#"><%= post.title %></a></h2>
+    <h2 class="home"><%= link_to post.title, post %></a></h2>
     <div class="meta">
       Por <a href="#"><%= post.author.name %></a> em <span class="date"><%= post.created_at.strftime '%Y-%m-%d' %></span>
+      <span><%= link_to post.category.name, post.category %></span>
       <!--a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="educobuci">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script-->
     </div>
     <div class="social">
       <a href="#" class="comments">10 comentários</a>
-      <!--a href="#" class="retweet">retweet</a -->
     </div>
     <div class="body">
       <%= BlueCloth::new(post.content).to_html().html_safe() %>

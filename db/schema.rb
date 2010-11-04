@@ -10,13 +10,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101021034441) do
+ActiveRecord::Schema.define(:version => 20101101225805) do
 
   create_table "authors", :force => true do |t|
     t.string   "name"
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pages", :force => true do |t|
+    t.string   "title"
+    t.string   "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "permalink"
   end
 
   create_table "posts", :force => true do |t|
@@ -26,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20101021034441) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "author_id"
+    t.integer  "category_id"
   end
 
 end

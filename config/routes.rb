@@ -1,10 +1,18 @@
 WorksForMe::Application.routes.draw do
-  resources :authors
 
   resources :posts
+  resources :pages
+  resources :categories
+  resources :authors
+  
+  namespace :admin do
+    resources :posts
+  end
+  
   root :to => "home#index"
-
-  # The priority is based upon order of creation:
+  
+  match ':permallink' => 'posts#show'
+  
   # first created -> highest priority.
 
   # Sample of regular route:

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Edit', edit_admin_post_path(@post) %> |
+<%= link_to 'Back', admin_posts_path %>
+
+
+<p>
+  <b>Title:</b>
+  <%= @post.title %>
+</p>
+
+<p>
+  <b>Permalink:</b>
+  <%= @post.permalink %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= BlueCloth::new(@post.content).to_html.html_safe %>
+</p>

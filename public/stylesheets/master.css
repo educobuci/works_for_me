@@ -259,23 +259,22 @@ div.post pre
 }
 
 /* Right Column*/
-div#search, div#archive_list, div#lastest_posts
+div#search, div.side_menu
 {
   float:right;
 }
 
-div#archive_list, div#lastest_posts
+div.side_menu
 {
   border:solid 1px #c4c4c4;
   width:231px;
   margin-top:15px;
 }
-
-div#archive_list ul, div#lastest_posts ul
+div.side_menu ul
 {
   padding:0px 10px;
 }
-div#archive_list ul li, div#lastest_posts ul li
+div.side_menu ul li
 {
   list-style:none;
   padding:5px 7px;
@@ -284,11 +283,11 @@ div#archive_list ul li, div#lastest_posts ul li
   background-position: 0 .9em;
   border-bottom:dotted 1px silver;
 }
-
-div#archive_list a, div#lastest_posts a
+div.side_menu a
 {
   font-weight:normal;
 }
+
 div#lastest_posts span.view_all
 {
   text-align:right;
