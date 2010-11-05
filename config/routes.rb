@@ -1,6 +1,5 @@
 WorksForMe::Application.routes.draw do
 
-  resources :posts
   resources :pages
   resources :categories
   resources :authors
@@ -11,7 +10,7 @@ WorksForMe::Application.routes.draw do
   
   root :to => "home#index"
   
-  match ':permallink' => 'posts#show'
+  match ':permalink' => 'posts#show', :as => :permalink
   
   # first created -> highest priority.
 

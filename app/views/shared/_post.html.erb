@@ -4,7 +4,7 @@ if post.content.index('[!--more--]')
 end
 %>
   <div id="post-1" class="post">
-    <h2 class="home"><%= link_to post.title, post %></a></h2>
+    <h2 class="home"><%= link_to post.title, permalink_url(post.permalink) %></a></h2>
     <div class="meta">
       Por <a href="#"><%= post.author.name %></a> em <span class="date"><%= post.created_at.strftime '%Y-%m-%d' %></span>
       <span><%= link_to post.category.name, post.category %></span>

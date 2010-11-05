@@ -6,7 +6,12 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    if params[:permalink] != nil
+      @post = Post.find_by_permalink(params[:permalink])
+    else
+      @post = Post.find(params[:id])
+    end
+    
     respond_with @post
   end
 end
