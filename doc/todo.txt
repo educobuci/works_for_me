@@ -4,7 +4,7 @@
 - página de categorias
 / suporte a páginas personalizadas
 - página com todos os posts
-- busca e resultado
+- busca
 - revisao 1 de SEO
 - arquivo por ano
 - melhorar Admin
