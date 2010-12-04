@@ -1,12 +1,13 @@
 + mostrar a categoria dos posts
 / página do post e comentarios
 + url amigável
-- página de categorias
-/ suporte a páginas personalizadas
-- página com todos os posts
++ página de categorias
++ suporte a páginas personalizadas
 - busca
+- página com todos os posts
+- link para autor
 - revisao 1 de SEO
 - proteger admin
-- link para autor
+- corrigir acao de excluir registro do admin
 - arquivo por ano
 - melhorar UI do Admin

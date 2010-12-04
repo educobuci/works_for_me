@@ -1,15 +1,6 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Title:</b>
-  <%= @page.title %>
-</p>
-
-<p>
-  <b>Content:</b>
-  <%= @page.content %>
-</p>
-
-
-<%= link_to 'Edit', edit_page_path(@page) %> |
-<%= link_to 'Back', pages_path %>
+<div id="page-<%= @page.id %>" class="page">
+  <h1><%= @page.title %></h1>
+  <div class="body">
+    <%= BlueCloth::new(@page.content).to_html().html_safe() %>
+  </div>
+</div>

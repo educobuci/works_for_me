@@ -1,16 +1,17 @@
 WorksForMe::Application.routes.draw do
 
-  resources :pages
   resources :authors
   
   namespace :admin do
     resources :posts
     resources :categories
+    resources :pages
   end
   
   root :to => "home#index"
-  
-  match 'categoria/:permalink' => 'categories#show', :as => :category
+
+  match 'paginas/:permalink' => 'pages#show', :as => :page
+  match 'categorias/:permalink' => 'categories#show', :as => :category
   match ':permalink' => 'posts#show', :as => :permalink
   
   # first created -> highest priority.
