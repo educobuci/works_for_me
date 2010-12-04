@@ -12,12 +12,11 @@ h1
 {
   font-size:18pt;
   margin-top:0;
-  /*color:#917A3D;*/
 }
 h2
 {
   font-size:14pt;
-  margin-top:20px;
+  margin-top:15px;
   font-family: Arial, Helvetica;
   font-weight:normal;
 }
@@ -30,7 +29,14 @@ a:hover
 {
   text-decoration:underline;
 }
-
+div.body
+{
+  clear:both;
+}
+div.body p
+{
+  padding:10px 0;
+}
 /* Shared */
 div#main_area, div#footer
 {
@@ -136,23 +142,24 @@ div.post
   padding-bottom:40px;
   margin-bottom:20px;
 }
-div.post p
-{
-  margin:10px 0;
-}
-div.post div.body
-{
-  margin-top:30px;
-}
 div.meta
 {
   font-size:9pt;
   color:#7d7d7d;
   float:left;
 }
-div.meta span.date, div.meta a
+div.social
 {
-  /*font-weight:bold;*/
+  float:left;
+  font-size:9pt;
+  margin-left:10px;
+}
+div.social a.comments
+{
+  background:url('/images/comments.png') no-repeat;
+  padding-left:22px;
+  display:block;
+  height:18px;
 }
 span.continue
 {
@@ -166,7 +173,6 @@ span.continue
   float:right;
   margin-top:15px;
 }
-/* Posts */
 div#posts_preview
 {
   width:650px;
@@ -178,14 +184,6 @@ div.post
   border-bottom:1px dotted silver;
   padding-bottom:40px;
   margin-bottom:20px;
-}
-div.post p
-{
-  margin:10px 0;
-}
-div.post div.body
-{
-  margin-top:30px;
 }
 div.continue a
 {
@@ -208,21 +206,6 @@ div.post a.read_more
 {
   background:url('/images/rad_button.png');
 }
-div.social
-{
-  float:left;
-  margin-left:15px;
-  font-size:9pt;
-  color:#7d7d7d;
-}
-div.social a
-{
-  background:url('images/comments.png') no-repeat;
-  padding-left:22px;
-  display:block;
-  height:18px;
-}
-
 div.post pre
 {
   padding:10px;
@@ -231,20 +214,6 @@ div.post pre
   border:dotted 1px #AAA;
 
   white-space: pre-wrap;       /* css-3 */
-}
-div.social
-{
-  float:left;
-  margin-left:15px;
-  font-size:9pt;
-  color:#7d7d7d;
-}
-div.social a
-{
-  background:url('/images/comments.png') no-repeat;
-  padding-left:22px;
-  display:block;
-  height:18px;
 }
 
 div.post pre

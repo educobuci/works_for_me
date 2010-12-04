@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  respond_to :html
+  respond_to :html, :xml
 
   def index
     @posts = Post.order("created_at DESC").take(10);

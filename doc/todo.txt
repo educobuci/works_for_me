@@ -1,12 +1,18 @@
 + mostrar a categoria dos posts
-/ página do post e comentarios
++ página de post
 + url amigável
 + página de categorias
 + suporte a páginas personalizadas
+
+- comentarios do post
 - busca
 - página com todos os posts
+- RSS e Twitter
+- botao retweet
+- botao facebook like
 - link para autor
 - revisao 1 de SEO
+- suporte a quebra de post
 - proteger admin
 - corrigir acao de excluir registro do admin
 - arquivo por ano
