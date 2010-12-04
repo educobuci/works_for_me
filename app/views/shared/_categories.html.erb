@@ -2,7 +2,7 @@
   <h4>Categorias</h4>
   <ul>
     <% @categories.each do |category| %>
-    <li><%= link_to category.name, category %></a></li>
+    <li><%= link_to category.name, category_url(category.permalink) %></a></li>
     <% end %>
   </ul>
 </div>

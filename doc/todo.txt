@@ -6,5 +6,7 @@
 - página com todos os posts
 - busca
 - revisao 1 de SEO
+- proteger admin
+- link para autor
 - arquivo por ano
-- melhorar Admin
+- melhorar UI do Admin

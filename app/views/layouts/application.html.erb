@@ -11,17 +11,17 @@
     <div id="structure">
       <div id="container">
         <div id="header">
-          <a href="#" class="logo"><img src="/images/logo.png" alt="WORKS FOR ME" /></a>
-          <h1><a href="#">Works for me!</a></h1>
-          <span>// Na minha máquina funciona!</span>
+          <a class="logo" href="/" >WORKS FOR ME!</a>
+          <span class="subtitle">// Na minha máquina funciona!</span>
         </div>
         
         <%= render :partial => 'shared/main_menu' %>
         
         <div id="main_area">
 
-          <%= yield %>
-
+          <div id="content">  
+            <%= yield %>
+          </div>
           <div id="search">
             <form>
               <input class="text" name="q" value="Buscar" />

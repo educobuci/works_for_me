@@ -8,7 +8,7 @@ body
   font-family:Tahoma, Arial, Helvetica;
   color:#363636;
 }
-h2.home
+h1
 {
   font-size:18pt;
   margin-top:0;
@@ -18,7 +18,7 @@ h2
 {
   font-size:14pt;
   margin-top:20px;
-  font-family: Arial, Monaco, Consolas, Inconsolata, Courier New;
+  font-family: Arial, Helvetica;
   font-weight:normal;
 }
 a
@@ -62,28 +62,25 @@ div#header
 }
 div#header a.logo
 {
+  background: url('/images/logo.png') no-repeat;
   position:absolute;
+  width:110px;
+  height:140px;
+  text-indent:-10000px;
 }
-div#header h1
-{
-  padding:30px 120px;
-}
-div#header h1 a
+div#header span
 {
   background: url('/images/title.png') no-repeat;
   width:300px;
   height:27px;
   display:block;
-  text-indent:-100000px;
-}
-div#header span
-{
   color:#626262;
-  float:left;
   font-family: Monaco,Consolas,Inconsolata,Courier New;
   font-size:12pt;
-  margin:-54px 450px;
-  width:350px;
+  margin-top:28px;
+  margin-left:130px;
+  padding-left:360px;
+  padding-top:5px;
 }
 
 /* Menu */
@@ -125,13 +122,13 @@ div#main_area
   padding:22px 15px 15px 35px;
   overflow:hidden;
 } 
-
-/* Posts */
-div#posts_preview
+div#content
 {
   width:650px;
   float:left;
+  min-height:400px;
 }
+/* Posts */
 div.post
 {
   font-family:Tahoma;
@@ -367,4 +364,19 @@ div#footer
 div#footer p
 {
   margin-top:15px;
+}
+
+/* Categories */
+div.categories ul
+{
+  padding-left:15px;
+  padding-top:10px;
+}
+div.categories ul li
+{
+  list-style:none;
+  padding:2px 7px;
+  background-image: url('/images/arrow_bullet.png');
+  background-repeat: no-repeat;
+  background-position: 0 .7em;
 }
