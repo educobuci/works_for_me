@@ -13,6 +13,7 @@ WorksForMe::Application.routes.draw do
   match 'paginas/:permalink' => 'pages#show', :as => :page
   match 'categorias/:permalink' => 'categories#show', :as => :category
   match ':permalink' => 'posts#show', :as => :permalink
+  match 'todos/posts' => 'posts#index', :as => :all_posts
   
   # first created -> highest priority.
 

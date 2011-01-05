@@ -5,5 +5,5 @@
     <li><%= link_to post.title, permalink_url(post.permalink) %></li>
     <% end %>
   </ul>
-  <span class="view_all"><a href="#">ver todos &raquo;</a></span>
+  <span class="view_all"><%= link_to 'ver todos »', all_posts_url %></span>
 </div>

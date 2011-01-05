@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   respond_to :html
   
   def index
-    respond_with @posts    
+    respond_with @posts
   end
 
   def show

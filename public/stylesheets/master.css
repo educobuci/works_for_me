@@ -349,3 +349,14 @@ div.categories ul li
   background-repeat: no-repeat;
   background-position: 0 .7em;
 }
+
+/* History */
+div#history p
+{
+  margin:10px;
+}
+div#history span
+{
+  color:silver;
+  font-size:10pt;
+}
