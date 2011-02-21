@@ -4,9 +4,11 @@ class Post < ActiveRecord::Base
   belongs_to :author
   belongs_to :category
   
-  private
+  scope :feed, :order => 'created_at DESC'
   
-  def create_permalink
-    self.permalink = title.parameterize
-  end
+  private
+    def create_permalink
+      self.permalink = title.parameterize
+    end
+  
 end

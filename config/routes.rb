@@ -12,6 +12,7 @@ WorksForMe::Application.routes.draw do
 
   match 'paginas/:permalink' => 'pages#show', :as => :page
   match 'categorias/:permalink' => 'categories#show', :as => :category
+  match 'feeds' => 'feeds#index', :as => :feeds, :format => :atom
   match ':permalink' => 'posts#show', :as => :permalink
   match 'todos/posts' => 'posts#index', :as => :all_posts
   

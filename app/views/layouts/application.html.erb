@@ -5,6 +5,7 @@
       <%= stylesheet_link_tag 'master' %>
       <%= javascript_include_tag :defaults, 'jquery' %>
       <%= csrf_meta_tag %>
+      <%= auto_discovery_link_tag(:atom, "/feeds.atom") %>
     </head>
   </head>
   <body>
@@ -22,12 +23,13 @@
           <div id="content">  
             <%= yield %>
           </div>
-          <div id="search">
+          
+          <!--div id="search">
             <form>
               <input class="text" name="q" value="Buscar" />
               <input class="button" type="submit" value="buscar" />
             </form>
-          </div>
+          </div-->
           
           <%= render :partial => 'shared/latest_posts' %>
           
@@ -37,8 +39,8 @@
           
         </div>
         <div id="externals">
-          <a href="#" class="twitter">Signa-nos no Twitter</a>
-          <a href="#" class="rss">RSS</a>
+          <a href="http://twitter.com/worksformeblog" class="twitter">Signa-nos no Twitter</a>
+          <%= link_to "rss", feeds_url, :class => "rss" %>
         </div>
         <div id="footer">
           <p>2010 - worksforme.com.br</p>
