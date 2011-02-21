@@ -1,0 +1,6 @@
+<ul>
+  <% posts.each do |p| %>
+  <li><%= link_to p.title, permalink_url(p.permalink) %></li>
+  <% end %>
+</ul>
+
