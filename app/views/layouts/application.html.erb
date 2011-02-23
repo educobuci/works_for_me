@@ -2,10 +2,12 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <title>WORKS FOR ME</title>
-      <%= stylesheet_link_tag 'master' %>
-      <%= javascript_include_tag :defaults, 'jquery' %>
-      <%= csrf_meta_tag %>
-      <%= auto_discovery_link_tag(:atom, "/feeds.atom") %>
+    <link rel="SHORTCUT ICON" href="/images/favicon.ico" />
+		
+    <%= stylesheet_link_tag 'master' %>
+    <%= javascript_include_tag :defaults, 'jquery' %>
+    <%= csrf_meta_tag %>
+    <%= auto_discovery_link_tag(:atom, "/feeds.atom") %>
     </head>
   </head>
   <body>
@@ -48,4 +50,15 @@
       </div>
     </div>
   </body>
+  <script type="text/javascript">
+      var disqus_shortname = 'worksforme';
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function () {
+          var s = document.createElement('script'); s.async = true;
+          s.type = 'text/javascript';
+          s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+  </script>
 </html>

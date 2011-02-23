@@ -10,7 +10,7 @@ end
       <span><%= link_to post.category.name, category_url(post.category.permalink) %></span>
     </div>
     <div class="social">
-      <%= link_to '10 comentários', permalink_url(post.permalink) + '#comentarios', :class => 'comments' %>
+      <%= link_to '', permalink_url(post.permalink) + '#disqus_thread', :class => 'comments' %>
     </div>
     <div class="body">
       <%= BlueCloth::new(post.content).to_html().html_safe() %>

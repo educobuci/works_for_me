@@ -5,7 +5,7 @@ atom_feed do |feed|
   @posts.each do |post|
     feed.entry(post, :url => permalink_url(post.permalink)) do |entry|
       entry.title(post.title)
-      entry.content(BlueCloth::new(post.content).to_html())
+      entry.content(BlueCloth::new(post.content).to_html(), :type => "html")
     end
   end
 end
