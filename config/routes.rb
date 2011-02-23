@@ -1,11 +1,10 @@
 WorksForMe::Application.routes.draw do
 
-  resources :authors
-  
   namespace :admin do
     resources :posts
     resources :categories
     resources :pages
+    resources :authors
   end
   
   root :to => "home#index"
