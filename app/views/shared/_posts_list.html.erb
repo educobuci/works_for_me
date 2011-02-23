@@ -1,6 +1,6 @@
 <ul>
   <% posts.each do |p| %>
-  <li><%= link_to p.title, permalink_url(p.permalink) %></li>
+  <li><%= (link_to p.title, permalink_url(p.permalink)) +  " em " + p.created_at.strftime('%d/%m/%Y') %></li>
   <% end %>
 </ul>
 

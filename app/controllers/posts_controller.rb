@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   respond_to :html
   
   def index
+    @posts = Post.feed
     respond_with @posts
   end
 
@@ -12,6 +13,8 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
     end
     
-    respond_with @post
+    @title = @post.title
+    
+    respond_with
   end
 end

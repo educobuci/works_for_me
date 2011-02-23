@@ -1,7 +1,10 @@
 class CategoriesController < ApplicationController
-  respond_to :html, :xml
+  respond_to :html
+  
   def show
     @category = Category.find_by_permalink(params[:permalink])
-    respond_with @category
+    @title = @category.name
+    
+    respond_with
   end
 end
