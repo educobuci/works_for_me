@@ -8,12 +8,12 @@ body
   font-family:Tahoma, Arial, Helvetica;
   color:#363636;
 }
-h1
+h1, h2
 {
   font-size:18pt;
   margin-top:0;
 }
-h2
+h3
 {
   font-size:14pt;
   margin-top:15px;
