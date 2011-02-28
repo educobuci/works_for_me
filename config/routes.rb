@@ -5,10 +5,10 @@ WorksForMe::Application.routes.draw do
     resources :categories
     resources :pages
     resources :authors
+    match 'login' => 'login#index'
   end
   
   root :to => "home#index"
-
   match 'paginas/:permalink' => 'pages#show', :as => :page
   match 'categorias/:permalink' => 'categories#show', :as => :category
   match 'feeds' => 'feeds#index', :as => :feeds, :format => :atom
