@@ -294,28 +294,28 @@ div#search .button
 /* Externals */
 div#externals
 {
-  padding-right:40px;
+  position:absolute;
+  top:67px;
+  margin-left:820px;
 }
 div#externals a
 {
-  position:absolute;
+  display:block;
+  float:left;
   width:40px;
   height:60px;
   text-indent:-10000px;
-  margin-right:70px;
   overflow:hidden;
 }
 div#externals a.twitter
 {
   background:url('/images/twitter.png');
-  top:69px;
-  margin-left:850px;
+  margin-top:2px;
+  margin-right:10px;
 }
 div#externals a.rss
 {
   background:url('/images/rss.png');
-  top:67px;
-  margin-left:900px;
 }
 
 
