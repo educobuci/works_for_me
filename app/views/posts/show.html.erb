@@ -1,5 +1,10 @@
 <div id="posts_preview">
   <%= render :partial => "shared/post", :locals => { :post => @post } %>
+  <div id="post-share">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-text="<%= @post.title %>" data-count="horizontal" data-via="worksformeblog">Tweet</a>
+      <iframe src="http://www.facebook.com/plugins/like.php?href=<%= permalink_url(@post.permalink) %>&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe>
+  </div>
+  
   <div id="disqus_thread"></div>
   <script type="text/javascript">
       var disqus_shortname = 'worksforme';
@@ -15,3 +20,5 @@
   <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
 </div>
+
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>

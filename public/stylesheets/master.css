@@ -223,6 +223,11 @@ div.post pre
   font-family: Monaco, Consolas, Inconsolata, Courier;
   border:dotted 1px #AAA;
 }
+#post-share
+{
+  margin-top:-60px;
+  margin-bottom:60px;
+} 
 
 /* Right Column*/
 div#search, div.side_menu
