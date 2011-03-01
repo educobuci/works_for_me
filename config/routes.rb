@@ -7,6 +7,7 @@ WorksForMe::Application.routes.draw do
     resources :authors
     match 'login' => 'login#index'
     match 'login/create' => 'login#create'
+    match 'login/destroy' => 'login#destroy'
   end
   
   root :to => "home#index"
@@ -15,7 +16,7 @@ WorksForMe::Application.routes.draw do
   match 'feeds' => 'feeds#index', :as => :feeds, :format => :atom
   match ':permalink' => 'posts#show', :as => :permalink
   match 'todos/posts' => 'posts#index', :as => :all_posts
-  
+   
   # first created -> highest priority.
 
   # Sample of regular route:
@@ -70,5 +71,4 @@ WorksForMe::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
 end

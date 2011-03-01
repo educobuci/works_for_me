@@ -1,9 +1,12 @@
 class AdminController < ActionController::Base
   protect_from_forgery
   before_filter :authenticate
-    
+  
   private
+  
   def authenticate
+    @current_author = session[:author]
+    
     if session[:author].nil?
       session[:request_uri] = request.request_uri
       
@@ -14,5 +17,5 @@ class AdminController < ActionController::Base
         redirect_to url_for(:action => 'index', :controller => 'login') 
       end
     end
-  end
+  end  
 end

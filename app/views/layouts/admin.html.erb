@@ -6,8 +6,17 @@
     <%= javascript_include_tag 'jquery', 'admin' %>
   </head>
   <body>
-    <p class="flash notice"><%= flash[:notice] %></p>
+    <% unless @current_author.nil? %>
+      <span><%= @current_author.email %></span>
+      (<%= link_to 'logout', :controller => 'login', :action => 'destroy' %>)
+    <% end %>
+
     <h2>::Admin Area::</h2>
     <%= yield %>
+    
+    <div class="flash">
+      <p class="notice"><%= flash[:notice] %></p>
+      <p class="warning"><%= flash[:warning] %></p>
+    </div>
   </body>
 </html>
