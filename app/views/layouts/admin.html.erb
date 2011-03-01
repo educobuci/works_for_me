@@ -6,17 +6,36 @@
     <%= javascript_include_tag 'jquery', 'admin' %>
   </head>
   <body>
-    <% unless @current_author.nil? %>
-      <span><%= @current_author.email %></span>
-      (<%= link_to 'logout', :controller => 'login', :action => 'destroy' %>)
-    <% end %>
-
-    <h2>::Admin Area::</h2>
-    <%= yield %>
-    
-    <div class="flash">
-      <p class="notice"><%= flash[:notice] %></p>
-      <p class="warning"><%= flash[:warning] %></p>
+    <div id="container">
+      
+      <div id="header">
+        <h2>admin area</h2>
+      </div>
+      
+      <div id="user">
+        <% unless @current_author.nil? %>
+          <span><%= @current_author.email %></span>
+          (<%= link_to 'sing out', :controller => 'login', :action => 'destroy' %>)
+        <% end %>
+      </div>
+      
+      <div id="menu">
+        <ul>
+          <li><%= link_to 'authors', admin_authors_path %></li>
+          <li><%= link_to 'categories', admin_categories_path %></li>
+          <li><%= link_to 'pages', admin_pages_path %></li>
+          <li><%= link_to 'posts', admin_posts_path %></li>
+        </ul>
+      </div>
+      
+      <div id="content">
+        <%= yield %>
+      </div>
+      
+      <div id="notifications">
+        <p class="notice"><%= flash[:notice] %></p>
+        <p class="warning"><%= flash[:warning] %></p>
+      </div>
     </div>
   </body>
 </html>
