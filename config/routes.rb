@@ -6,6 +6,7 @@ WorksForMe::Application.routes.draw do
     resources :pages
     resources :authors
     match 'login' => 'login#index'
+    match 'login/create' => 'login#create'
   end
   
   root :to => "home#index"
