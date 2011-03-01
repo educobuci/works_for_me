@@ -1,5 +1,11 @@
-<%= form_for :author, :url => url_for(:action => 'create')   do |f| %>
-  <%= f.text_field :email %>
-  <%= f.text_field :password, :type => 'password' %>
-  <p><input type="submit" value="Login"></p>
-<% end %>
+<div>
+  <%= form_for :author, :url => url_for(:action => 'create')   do |f| %>
+    <div class="field">
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <%= f.text_field :password, :type => 'password' %>
+    </div>
+    <div class="actions"><input type="submit" value="Login"></div>
+  <% end %>
+</div>

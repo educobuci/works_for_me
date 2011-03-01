@@ -5,6 +5,8 @@ WorksForMe::Application.routes.draw do
     resources :categories
     resources :pages
     resources :authors
+    
+    match '/' => 'posts#index'
     match 'login' => 'login#index'
     match 'login/create' => 'login#create'
     match 'login/destroy' => 'login#destroy'
