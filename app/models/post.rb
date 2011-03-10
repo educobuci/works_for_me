@@ -8,7 +8,9 @@ class Post < ActiveRecord::Base
   
   private
     def create_permalink
-      self.permalink = title.parameterize
+      if self.permalink == "" || nil
+        self.permalink = title.parameterize
+      end
     end
   
 end
