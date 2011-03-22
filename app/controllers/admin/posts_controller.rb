@@ -39,7 +39,7 @@ class Admin::PostsController < AdminController
   # POST /posts.xml
   def create
     @post = Post.new(params[:post])
-
+    
     respond_to do |format|
       if @post.save
         format.html { redirect_to([:admin, @post], :notice => 'Post was successfully created.') }

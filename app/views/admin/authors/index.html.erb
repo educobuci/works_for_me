@@ -15,7 +15,7 @@
     <td><%= author.email %></td>
     <td><%= link_to 'Show', admin_author_path(author) %></td>
     <td><%= link_to 'Edit', edit_admin_author_path(author) %></td>
-    <td><%= link_to 'Destroy', admin_author_path(author), :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', admin_author_path(author), :confirm => 'Are you sure?', :method => :delete, :remote => true %></td>
   </tr>
 <% end %>
 </table>
